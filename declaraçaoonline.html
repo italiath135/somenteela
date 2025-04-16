@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Mensagem Para Larissa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f3e5f5, #ffccf9);
+            animation: backgroundAnimation 10s infinite alternate;
+            color: #3b2e8e;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #f3e5f5, #ffccf9);
+            }
+            100% {
+                background: linear-gradient(135deg, #ffccf9, #f3e5f5);
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 0;
+            font-style: italic;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #ff69b4;
+            margin-top: 20px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+            animation: fadeInText 3s ease-in-out;
+        }
+
+        .heart {
+            font-size: 3em;
+            color: red;
+            animation: pulse 1.5s infinite;
+            margin-top: 20px;
+        }
+
+        .heart2 {
+            color: #ff69b4;
+            font-size: 4em;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #ff4081;
+        }
+
+        .love-message {
+            font-size: 2em;
+            color: #ff1493;
+            margin-top: 20px;
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .show-love {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Larissa, cada detalhe em você é uma obra-prima.</h1>
+        <h2>A beleza de sua presença transforma meu mundo.</h2>
+        <p>É incrível como cada gesto seu, cada palavra, e até o simples olhar, fazem meu coração bater mais forte. Eu admiro a sua força, a sua calma, e a sua leveza. Não é apenas o que você é, mas o que você representa para mim — algo além das palavras.</p>
+        <p>Você não precisa fazer nada para ser perfeita aos meus olhos, pois cada momento que compartilho com você é, por si só, uma dádiva. Eu amo como tudo em você faz sentido, como cada detalhe se encaixa em uma linda história que estamos escrevendo juntos.</p>
+        
+        <!-- Botão de interação -->
+        <button class="button" onclick="showLoveMessage()">Clique aqui!!!...</button>
+
+        <!-- Mensagem oculta que aparece após o clique -->
+        <div id="loveMessage" class="love-message">
+            <p>Eu lhe amo, Larissa!</p>
+        </div>
+
+        <!-- Corações animados -->
+        <div class="heart">❤️</div>
+        <div class="heart2">💖</div>
+        <p>Com todo carinho e admiração,</p>
+        <p>Fernando</p>
+    </div>
+
+    <!-- Script para mostrar a mensagem ao clicar -->
+    <script>
+        function showLoveMessage() {
+            var loveMessage = document.getElementById("loveMessage");
+            loveMessage.classList.add("show-love");
+        }
+    </script>
+
+</body>
+</html>
